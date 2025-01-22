@@ -18,5 +18,17 @@ function deleteEtudiantDb($id){
 }
 function getOneEtudiant($id){
     global $connexion;
-    
+    $sql = "SELECT * FROM etudiant WHERE id = $id";
+    return pg_query($connexion, $sql);
+}
+function updateEtudiantDb($id, $prenom, $nom, $filiere, $email){
+    global $connexion;
+    $sql = "UPDATE etudiant SET
+            prenom = '$prenom',
+            nom = '$nom',
+            email = '$email',
+            filiere = '$filiere'
+            WHERE id = $id
+    ";
+    pg_query($connexion, $sql);
 }

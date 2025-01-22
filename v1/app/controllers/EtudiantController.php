@@ -22,5 +22,12 @@ function deleteEtudiant(){
 }
 function editEtudiantForm(){
     $id = $_GET['id'];
-    
+    $etudiant = pg_fetch_assoc(getOneEtudiant($id));
+    require '../app/views/etudiants/edit.php';
+}
+function updateEtudiant(){
+    $id = $_GET['id'];
+    extract($_POST);
+    updateEtudiantDb($id, $prenom, $nom, $filiere, $email);
+    header('location:index.php?action=viewEtudiant');
 }

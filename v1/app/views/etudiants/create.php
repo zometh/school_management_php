@@ -17,13 +17,13 @@
        
       
         <select class="form-select mb-3" aria-label="Default select example" name="filiere">
-  <option selected>Choisir la filière</option>
+
   <option value="Informatique">Informatique</option>
   <option value="Gestion">Gestion</option>
   <option value="Marketing">Marketing</option>
   
 </select>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
 </div>
 </main>

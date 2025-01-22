@@ -30,8 +30,29 @@ if(isset($_GET["action"])){
         case 'deleteEtudiant':
             deleteEtudiant();
             break;
-        case 'editEtudiantid':
+        case 'editEtudiant':
             editEtudiantForm();
+            break;
+        case 'updateEtudiant':
+            updateEtudiant();
+            break;
+        case 'viewCours':
+            ViewCours();
+            break;
+        case 'addCours':
+            addCoursForm();
+            break;
+        case 'saveCours':
+            saveCours();
+            break;
+        case 'editCours':
+            editCoursForm();
+            break;
+        case 'updateCours':
+            updateCours();
+            break;
+        case 'deleteCours':
+            deleteCours();
             break;
     }
 }
