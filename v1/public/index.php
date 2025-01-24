@@ -54,6 +54,9 @@ if(isset($_GET["action"])){
         case 'deleteCours':
             deleteCours();
             break;
+        default:
+        errorPage();
+        break;
     }
 }
 else{
